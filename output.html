@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+  <style>
+    body {
+      font-family: 'Inter';font-size: 22px;
+      margin: 0;
+      padding: 0;
+      background-color: #DFDFDF;
+    }
+
+    button {
+      padding: 0;
+      border: none;
+      background: none;
+    }
+    
+    #header {
+      font-family: 'Inter';font-size: 22px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #201F28;
+      color: white;
+      padding: 20px;
+      font-size: 20px;
+      text-align: left;
+      z-index: 99 !important
+    }
+    
+    #sidebar {
+      font-family: 'Inter';font-size: 22px;
+      width: 250px;
+      height: 100%;
+      background-color: #ffffff;
+      position: fixed;
+      top: 60px;
+      left: 0;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 30px;
+      line-height: 2;
+      white-space: nowrap
+    }
+    
+    #content {
+      margin-top: 60px;
+      margin-left: 250px;
+      padding: 20px;
+    }
+
+    #sidebar button {
+      margin-left: 15px;
+    }
+    
+    #sidebar a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #818181;
+      display: block;
+      transition: 0.2s;
+      display: block;
+      padding: 5px 20px;
+      margin-bottom: 5px;
+      text-decoration: none;
+    }
+
+    #sidebar a:before {
+      content: '';
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: #818181;
+      margin-right: 20px;
+      transition: transform 0.3s;
+    }
+    
+    
+    #sidebar a:hover:before {
+      transform: rotate(45deg);
+      background-color: #ffffff;
+    }
+
+    #sidebar a:hover {
+      background-color: #121823;
+      color: #f1f1f1;
+      font-size:22px;
+      padding-left: 25px;
+    }
+
+    #circle {
+      top: 25%;
+      position:absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin: 0 auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      animation: expand 1s forwards;
+    }
+
+    #inner-circle {
+      position:absolute;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: white;
+      position: absolute;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @keyframes expand {
+      0% {
+        width: 0;
+        height: 0;
+        opacity: 0;
+      }
+      100% {
+        width: 200px;
+        height: 200px;
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadein {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    #caption {
+      position:absolute;
+      font-size:40px;
+      animation: fadein 3s forwards;
+    }
+    #caption2 {
+      top:220px;
+      position:absolute;
+      font-size:20px;
+      animation: fadein 2s forwards;
+      white-space: nowrap; 
+    }
+    .container {
+      
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Customize the shadow properties as needed */
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .container header {
+      background-color: #7C8189;
+      display: flex;
+      color:white;
+      padding:1.5%;
+      top: 0;
+      left: 0;
+      font-size:20px;
+      width: 100%;
+      height:5%;
+    }
+
+    .tabletitle {
+      background-color: #7C8189;
+      color:white;
+      width: 100%;
+      height: 30%;
+      font-weight: normal;
+    }
+    
+    .container button {
+      position:absolute;
+      top:50%;
+      left:50%;
+      padding: 10px 20px;
+      border-radius: 10px;
+      background-color: gray;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .container .text {
+      position:absolute;
+      top:20%;
+      padding: 10px 20px;
+      border-radius: 10px;
+      background-color: gray;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .container button:hover{
+      background-color: black;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    #header1 {
+      padding:40px;
+      padding-left:80px;
+      padding-right:80px;
+      font-size:18px;
+    }
+    #header2 {
+      margin-top:20px;
+      font-size:30px;
+      animation: fadein 2s forwards;
+      white-space: nowrap; 
+      color: #F16767;
+      text-align:center;
+    }
+    .circle {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+    .circle-high {
+      background-color: #FF6782;
+    }
+    .circle-medium {
+      background-color: #FFAD80;
+    }
+    .circle-low {
+      background-color: #80D1FF;
+    }
+    table {
+    border-collapse: collapse;
+    width: 100%;
+    }
+    
+    th, td {
+      padding: 8px;
+      padding-top:15px;
+      padding-bottom:15px;
+      
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    th {
+      background-color: #E4EBF9;
+    }
+    .fade-in-row {
+      opacity: 0;
+      animation: fade-in 0.5s ease-in-out forwards;
+    }
+
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+        background-color: rgb(0, 0, 0);
+      }
+      100% {
+        opacity: 1;
+        background-color: rgba(255, 255, 255, 1);
+      }
+    }
+    
+  </style>
+</head>
+<body>
+  <div id="header">
+    SOJOSPECT
+  </div>
+
+  <div id="sidebar">
+    <a href="./website">Dashboard</a>
+    <a href="./website2">Scan</a>
+    <a href="./website5">Targets</a>
+    <a href="#reports">Reports</a>
+    <a href="./website6">Settings</a>
+  </div>
+
+  <div id="content">
+    <div class="container">
+      <table>
+        <thead>
+          <tr>
+            <th colspan="4" class="tabletitle">Vulnerabilites</th>
+          </tr>
+          <tr>
+            <th>Severity</th>
+            <th>Vulnerability Type</th>
+            <th>URL</th>
+            <th>Checked at</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in data %}
+          <tr class="fade-in-row">
+            <td>
+              <span class="circle {% if row[0] == 'High' %}circle-high{% elif row[0] == 'Medium' %}circle-medium{% elif row[0] == 'Low' %}circle-low{% endif %}"></span>
+              {{ row[0] }}
+            </td>
+            <td>{{ row[1] }}</td>
+            <td>
+              <a href="{{ row[2] }}">
+                {% if row[2]|length > 28 %}
+                  {{ row[2][:28] }}...
+                {% else %}
+                  {{ row[2] }}
+                {% endif %}
+              </a>
+            </td>
+            <td>{{ row[3] }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <script>
+        const rows = document.querySelectorAll('.fade-in-row');
+        rows.forEach((row, index) => {
+          row.style.animationDelay = `${index * 0.1}s`;
+        });
+      </script>
+    </div>
+  </div>
+
+
+</body>
+</html>

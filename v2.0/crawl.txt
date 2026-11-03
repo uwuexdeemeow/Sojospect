@@ -1,0 +1,13 @@
+{"URL": "https://chmsdemo.greenfossil.com/", "Endpoint": "/", "Method": "GET"}
+{"URL": "https://chmsdemo.greenfossil.com/", "Endpoint": null, "Method": "POST", "Param_1": {"class": null, "id": null, "name": "hdn_token", "type": "hidden", "value": ""}}
+{"URL": "https://chmsdemo.greenfossil.com/", "Endpoint": "/search", "Method": "POST", "Param_1": {"class": ["searchbar"], "id": "search-term-form-input", "name": "query", "type": "text", "value": null}}
+{"URL": "https://chmsdemo.greenfossil.com/dashboard", "Endpoint": "/dashboard", "Method": "GET"}
+{"URL": "https://chmsdemo.greenfossil.com/dashboard", "Endpoint": null, "Method": "POST", "Param_1": {"class": null, "id": null, "name": "hdn_token", "type": "hidden", "value": ""}}
+{"URL": "https://chmsdemo.greenfossil.com/dashboard", "Endpoint": "/search", "Method": "POST", "Param_1": {"class": ["searchbar"], "id": "search-term-form-input", "name": "query", "type": "text", "value": null}}
+{"URL": "https://chmsdemo.greenfossil.com/login", "Endpoint": "/login", "Method": "GET"}
+{"URL": "https://chmsdemo.greenfossil.com/login", "Endpoint": "/authenticate", "Method": "POST", "Param_1": {"class": null, "id": "loginId", "name": "loginId", "type": "text", "value": null}, "Param_2": {"class": null, "id": "password", "name": "password", "type": "password", "value": null}}
+{"URL": "https://chmsdemo.greenfossil.com/site/favicon", "Endpoint": "/site/favicon", "Method": "GET"}
+{"URL": "https://chmsdemo.greenfossil.com/assets/theme-module/fomanticui/theme-default.min.css", "Endpoint": "/assets/theme-module/fomanticui/theme-default.min.css", "Method": "GET"}
+{"URL": "https://chmsdemo.greenfossil.com/assets/chms2/stylesheets/global.css", "Endpoint": "/assets/chms2/stylesheets/global.css", "Method": "GET"}
+{"URL": "https://chmsdemo.greenfossil.com/assets/chms2/stylesheets/basicSUIFooter.css", "Endpoint": "/assets/chms2/stylesheets/basicSUIFooter.css", "Method": "GET"}
+{"URL": "/assets/jquery/dist/jquery.min.js", "Endpoint": "/", "Method": "GET"}

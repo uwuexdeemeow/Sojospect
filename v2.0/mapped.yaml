@@ -1,0 +1,10 @@
+- Urls with Input Fields:
+  - Endpoint: /user/password/1/edit
+    Input Fields: 'hdn_token: hidden, search-input: text, oldpassword: password, newpassword:
+      password, repeatpassword: password, APP_CSRF_TOKEN: hidden, '
+    Method: Post
+    Url: https://chmsdemo.greenfossil.com/user/password/1/edit
+- Urls without Input Fields:
+  - - https://chmsdemo.greenfossil.com/communication/sent
+    - https://chmsdemo.greenfossil.com
+    - https://chmsdemo.greenfossil.com/login
